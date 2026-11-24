@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Builds Skidbladnir.dll and writes dist/Local-Skidbladnir-<version>.zip
+# Builds Skidbladnir.dll and writes dist/Lemuria-Skidbladnir-<version>.zip
 # (Thunderstore layout: manifest.json, README.md, CHANGELOG.md, icon.png, plugins/Skidbladnir.dll).
 # Game references: see README "Building from source" (RefsDir).
 set -e
@@ -15,7 +15,7 @@ STAGE=dist/stage
 rm -rf "$STAGE"; mkdir -p "$STAGE/plugins"
 cp package/{manifest.json,icon.png} README.md CHANGELOG.md "$STAGE/"
 cp bin/Release/Skidbladnir.dll "$STAGE/plugins/"
-ZIP="$PWD/dist/Local-Skidbladnir-$VERSION.zip"
+ZIP="$PWD/dist/Lemuria-Skidbladnir-$VERSION.zip"
 rm -f "$ZIP"
 (cd "$STAGE" && zip -qr -X "$ZIP" .)
 rm -rf "$STAGE"

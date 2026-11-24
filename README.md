@@ -7,7 +7,7 @@
 
 Getting a ship to a far coast usually means tearing it down, carrying the materials through a portal and building it again. With Skíðblaðnir you fold the ship, walk through the portal and unfold it on the other side.
 
-This mod is made intentionally lore- and vanilla-friendly. It introduces no new workbenches or materials, uses no custom models or textures or hotkeys. It’s also based on actual norse mythology, bringing yet another small piece of this fascinating culture into an amazing game.
+This mod is made intentionally lore- and vanilla-friendly. It introduces no new workbenches or materials, uses no custom models or textures or hotkeys. It’s also based on actual Norse mythology, bringing yet another small piece of this fascinating culture into an amazing game.
 
 
 ## Features
@@ -65,7 +65,7 @@ refs/core/      <- Valheim/BepInEx/core/*.dll
 ```sh
 dotnet build -c Release                         # refs next to the repository folder
 dotnet build -c Release -p:RefsDir=/path/refs/  # or anywhere else (trailing slash)
-./package.sh                                    # build + dist/Local-Skidbladnir-<version>.zip
+./package.sh                                    # build + dist/Lemuria-Skidbladnir-<version>.zip
 ```
 
 The version is in `Plugin.cs` and `package/manifest.json`; `package.sh` checks that they match.

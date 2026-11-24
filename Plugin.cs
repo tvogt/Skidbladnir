@@ -12,7 +12,7 @@ namespace Skidbladnir
     {
         public const string Guid = "local.Skidbladnir";
         public const string Name = "Skidbladnir";
-        public const string Version = "0.1.0";
+        public const string Version = "0.1.1";
 
         internal static ManualLogSource Log;
 

@@ -6,7 +6,7 @@
     <RootNamespace>Skidbladnir</RootNamespace>
     <LangVersion>latest</LangVersion>
     <Nullable>disable</Nullable>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <!-- ServerSync/ConfigSync.cs (vendored unmodified) uses nullable annotations outside a #nullable context. -->
     <NoWarn>$(NoWarn);CS8632</NoWarn>
