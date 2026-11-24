@@ -202,6 +202,17 @@ namespace Skidbladnir
             if (!db.m_recipes.Contains(Recipe)) db.m_recipes.Add(Recipe);
         }
 
+        // Vanilla: upgrade level = crafting level + (quality - 1). Ours has its own upgrade level.
+        [HarmonyPatch(typeof(Recipe), nameof(Recipe.GetRequiredStationLevel))]
+        private static class RequiredStationLevel
+        {
+            private static void Postfix(Recipe __instance, int quality, ref int __result)
+            {
+                if (__instance != Recipe || !Recipe || quality < 2) return;
+                __result = Mathf.Max(Plugin.StationLevel.Value, Plugin.UpgradeStationLevel.Value);
+            }
+        }
+
         [HarmonyPatch(typeof(ObjectDB), "Awake")]
         private static class ObjectDBAwake
         {

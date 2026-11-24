@@ -28,6 +28,7 @@ namespace Skidbladnir
         internal static ConfigEntry<bool> LockConfig;
         internal static ConfigEntry<string> Station;
         internal static ConfigEntry<int> StationLevel;
+        internal static ConfigEntry<int> UpgradeStationLevel;
         internal static ConfigEntry<bool> LongshipCost;
         internal static ConfigEntry<string> ExtraCost;
         internal static ConfigEntry<string> UpgradeCost;
@@ -44,8 +45,10 @@ namespace Skidbladnir
 
             Station = Bind("1 - Recipe", "CraftingStation", "forge",
                 "Prefab name of the crafting station where Skíðblaðnir is crafted, upgraded and repaired (forge, piece_workbench, blackforge, piece_magetable, ...).");
-            StationLevel = Bind("1 - Recipe", "MinStationLevel", 1,
-                new ConfigDescription("Station level needed to craft it. The upgrade to level 2 needs one level more.", new AcceptableValueRange<int>(1, 10)));
+            StationLevel = Bind("1 - Recipe", "MinStationLevel", 3,
+                new ConfigDescription("Station level needed to craft and repair it. Forge: 3 = the finished bronze-age forge (Forge Cooler + Anvils).", new AcceptableValueRange<int>(1, 10)));
+            UpgradeStationLevel = Bind("1 - Recipe", "UpgradeStationLevel", 5,
+                new ConfigDescription("Station level needed for the upgrade to level 2 (fair wind). Forge: 5 = four extensions, iron age. Never lower than MinStationLevel.", new AcceptableValueRange<int>(1, 10)));
             LongshipCost = Bind("1 - Recipe", "LongshipMaterials", true,
                 "Include the materials of a longship (taken from the game's own longship piece, so mods that change it are followed).");
             ExtraCost = Bind("1 - Recipe", "ExtraMaterials", "TrophySerpent:2",
