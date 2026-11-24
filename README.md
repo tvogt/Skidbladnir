@@ -64,6 +64,10 @@ dotnet build -c Release -p:RefsDir=/path/refs/  # or anywhere else (trailing sla
 
 The version is in `Plugin.cs` and `package/manifest.json`; `package.sh` checks that they match.
 
+## Source and bug reports
+
+https://github.com/tvogt/Skidbladnir. Please report problems there as issues, with your `BepInEx/LogOutput.log`.
+
 ## Credits and licence
 
 MIT licence, see [LICENSE](LICENSE). `ServerSync/ConfigSync.cs` is [ServerSync](https://github.com/blaxxun-boop/ServerSync) by blaxxun-boop, included unmodified under its own licence (`ServerSync/LICENSE.txt`).
