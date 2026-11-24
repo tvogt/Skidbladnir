@@ -28,7 +28,7 @@ Everything else is a normal item: anyone can craft one, it goes through portals,
 
 ## Configuration
 
-`BepInEx/config/local.Skidbladnir.cfg`. All settings are synced from the server; with `LockConfiguration` on, only admins can change them.
+`BepInEx/config/Lemuria.Skidbladnir.cfg`. All settings are synced from the server; with `LockConfiguration` on, only admins can change them.
 
 | Section | Setting | Default | Meaning |
 |---|---|---|---|

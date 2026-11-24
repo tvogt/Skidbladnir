@@ -10,7 +10,7 @@ namespace Skidbladnir
     [BepInPlugin(Guid, Name, Version)]
     public class Plugin : BaseUnityPlugin
     {
-        public const string Guid = "local.Skidbladnir";
+        public const string Guid = "Lemuria.Skidbladnir";
         public const string Name = "Skidbladnir";
         public const string Version = "0.1.1";
 

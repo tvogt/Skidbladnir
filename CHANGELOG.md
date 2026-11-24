@@ -4,6 +4,7 @@
 
 - Crafting and repairing need a level 3 Forge (Forge Cooler + Anvils), the upgrade to level 2 a level 5 Forge. Both are configurable (`MinStationLevel`, new `UpgradeStationLevel`); before, the upgrade was always one level above crafting.
 - New icon.
+- Plugin ID is now `Lemuria.Skidbladnir` (config file `BepInEx/config/Lemuria.Skidbladnir.cfg`; settings from 0.1.0's `local.Skidbladnir.cfg` are not carried over).
 - README: corrected hammer removal (ordinary ships can't be removed with the hammer), download link.
 
 ## 0.1.0
