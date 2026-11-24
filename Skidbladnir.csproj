@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>Skidbladnir</AssemblyName>
+    <RootNamespace>Skidbladnir</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <Version>0.1.0</Version>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <!-- ServerSync/ConfigSync.cs (vendored unmodified) uses nullable annotations outside a #nullable context. -->
+    <NoWarn>$(NoWarn);CS8632</NoWarn>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <!-- Game and BepInEx assemblies: copy Valheim_Data/Managed to <RefsDir>Managed and BepInEx/core to <RefsDir>core,
+         or pass -p:RefsDir=/path/to/refs/ -->
+    <RefsDir Condition="'$(RefsDir)' == ''">$(MSBuildThisFileDirectory)..\refs\</RefsDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- .NET Framework reference assemblies so the net48 build works on macOS without Mono. -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="$(RefsDir)core\BepInEx.dll" Private="false" />
+    <Reference Include="$(RefsDir)core\0Harmony.dll" Private="false" />
+    <Reference Include="$(RefsDir)Managed\assembly_valheim.dll" Private="false" />
+    <Reference Include="$(RefsDir)Managed\assembly_utils.dll" Private="false" />
+    <Reference Include="$(RefsDir)Managed\assembly_guiutils.dll" Private="false" />
+    <Reference Include="$(RefsDir)Managed\Unity.TextMeshPro.dll" Private="false" />
+    <Reference Include="$(RefsDir)Managed\UnityEngine.UI.dll" Private="false" />
+    <Reference Include="$(RefsDir)Managed\UnityEngine.dll" Private="false" />
+    <Reference Include="$(RefsDir)Managed\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(RefsDir)Managed\UnityEngine.PhysicsModule.dll" Private="false" />
+  </ItemGroup>
+
+</Project>

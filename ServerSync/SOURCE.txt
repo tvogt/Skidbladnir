@@ -1,0 +1,2 @@
+ServerSync by blaxxun-boop, https://github.com/blaxxun-boop/ServerSync
+commit c57c2aa54e07cdcc7630d6068699ea781622323e (2025-04-06), ConfigSync.cs copied unmodified.

@@ -1,0 +1,10 @@
+{
+  "name": "Skidbladnir",
+  "author_name": "Local",
+  "version_number": "0.1.0",
+  "website_url": "",
+  "description": "Skíðblaðnir, Freyr's folding ship: a longship that folds into a light item you can carry through portals and unfold at any shore. Level 2 (Moder trophy) has a permanent fair wind.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2333"
+  ]
+}
